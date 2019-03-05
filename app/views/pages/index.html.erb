@@ -6,7 +6,7 @@
 	<title>Rocket Elevators</title>
 	<meta name="Rocket Elevators Website" content="" />
 	<meta name="Dominic Villemure" content="Dominic Villemure [www.codeboxx.biz]" />
-	<link rel="icon" type="image/png" href="RocketElevatorAssets/R22.png">
+	<link rel="icon" type="image/png" href="R22.png">
 
 	<!-- mobile settings -->
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -17,23 +17,26 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 	<!-- CORE CSS -->
-	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 	<!-- REVOLUTION SLIDER -->
 	<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
 	<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
 
 	<!-- THEME CSS -->
-	<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<%# <link href="assets/stylesheets/essentials.scss" rel="stylesheet" type="text/css" /> %>
+	<%# <link href="assets/stylesheets/layout.css" rel="stylesheet" type="text/css" /> %>
 	<link href="assets/plugins/bootstrap/css/Custom.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/Custom.css" />
+	<%# <link href="assets/stylesheets/Custom.css" /> %>
 
 
 
 	<!-- PAGE LEVEL SCRIPTS -->
-	<link href="assets/css/header-2.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/color_scheme/lightgrey.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	<%# <link href="/assets/stylesheets/header-2.css" rel="stylesheet" type="text/css" />
+	<link href="/assets/stylesheets/color_scheme/lightgrey.css" rel="stylesheet" type="text/css" id="color_scheme" /> %>
+
+	
+
 </head>
 
 
@@ -64,7 +67,8 @@
 
 					<!-- Logo -->
 					<a class="submenu-dark" href="#">
-						<img src="RocketElevatorAssets/R22.png" width="150" height="60" alt="RocketElevator-logo" />
+
+						<%= image_tag("R22.png", :alt => "RocketElevator-logo", :class => "img-fluid", :width =>"150", :height =>"60") %>
 					</a>
 
 
@@ -92,6 +96,7 @@
 									</a>
 									<ul class="dropdown-menu">
 										<li><a href="RocketElevatorsWebpage_Residential.html">Residential offers</a></li>
+										
 										<li><a href="RocketElevatorsWebpage_Corporate.html">Corporate offers</a></li>
 										<li><a href="RocketElevatorsWebpage_submission.html">Submission</a></li>
 									</ul>
@@ -149,8 +154,9 @@
 					<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600" data-saveperformance="off"
 					 data-title="slogan">
 						<!-- MAIN IMAGE -->
-						<img src="RocketElevatorAssets/AdobeStock_103570025.jpeg" width="600" alt="first_slide_background"
-						 data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+						<%= image_tag("AdobeStock_103570025.jpeg", :alt => "first_slide_background", :width =>"600", :data => "center top", :data => "cover", :data =>"no-repeat") %>
+
 
 						<div class="tp-caption white_big skewfromleft tp-resizeme" data-x="131" data-y="100" data-speed="400" data-start="1500"
 						 data-easing="Power3.easeInOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1"
@@ -189,8 +195,8 @@
 					<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600" data-saveperformance="off"
 					 data-title="Residential">
 						<!-- MAIN IMAGE -->
-						<img src="RocketElevatorAssets/trump_elevator.jpeg" width="900" alt="second_slide_background" data-bgposition="center top"
-						 data-bgfit="cover" data-bgrepeat="no-repeat">
+
+						<%= image_tag("trump_elevator.jpeg", :alt => "second_slide_background", :width =>"900", :data => "center top", :data => "cover", :data =>"no-repeat") %>
 
 						<div class="tp-caption white_big skewfromleft tp-resizeme" data-x="131" data-y="100" data-speed="400" data-start="1500"
 						 data-easing="Power3.easeInOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1"
@@ -222,8 +228,8 @@
 					<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600" data-saveperformance="off"
 					 data-title="Corporate">
 						<!-- MAIN IMAGE -->
-						<img src="RocketElevatorAssets/Dark_design_elevator.jpeg" width="900" alt="third_slide_background" data-bgfit="cover"
-						 data-bgrepeat="no-repeat">
+
+						<%= image_tag("Dark_design_elevator.jpeg", :alt => "third_slide_background", :width =>"900", :data => "center top", :data => "cover", :data =>"no-repeat") %>
 
 						<div class="tp-caption white_big skewfromleft tp-resizeme" data-x="31" data-y="100" data-speed="400" data-start="1500"
 						 data-easing="Power3.easeInOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1"
@@ -276,7 +282,9 @@
 
 					<div class="col-sm-4">
 
-						<img class="img-fluid" src="RocketElevatorAssets/5bf45826ede21.image.jpg" height="300" alt="Price image" />
+
+						<%= image_tag("5bf45826ede21.image.jpg", :alt => "Price image", :class => "img-fluid", :height =>"300") %>
+
 
 
 						<h3 class="mt-10">Prices we won and project we've done</h3>
@@ -286,7 +294,8 @@
 
 					<div class="col-sm-4">
 
-						<img class="img-fluid" src="RocketElevatorAssets/AdobeStock_124493370.jpeg" alt="Residential offers image" />
+
+						<%= image_tag("AdobeStock_124493370.jpeg", :alt => "Residential offers image", :class => "img-fluid", :height =>"300") %>
 
 						<h3 class="mt-10">Residential Buildings</h3>
 						<p>We have solution for all your residential needs. See by yourself.</p>
@@ -295,7 +304,8 @@
 
 					<div class="col-sm-4">
 
-						<img class="img-fluid" src="RocketElevatorAssets/AdobeStock_146216308.jpeg" alt="Corporate offers image" />
+
+						<%= image_tag("AdobeStock_146216308.jpeg", :alt => "Corporate offers image", :class => "img-fluid", :height =>"300") %>
 						<h3 class="mt-10">Corporate Building</h3>
 						<p>We have all what you need for your company. Take a look.</p>
 						<a href="RocketElevatorsWebpage_Corporate.html" class="btn btn-default">CORPORATE OFFERS</a>
@@ -313,7 +323,7 @@
 
 
 		<!-- PARALLAX -->
-		<section class="parallax parallax-1 dark" style="background-image: url('RocketElevatorAssets/AdobeStock_103570025.jpeg');">
+		<section class="parallax parallax-1 dark" style="background-image: url('AdobeStock_103570025.jpeg');">
 			<div class="overlay dark-5">
 				<!-- dark overlay [1 to 9 opacity] -->
 			</div>
@@ -370,14 +380,15 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/Shanghai_Tower.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/Shanghai_Tower.jpg" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/Shanghai_Tower.jpg" width="300" alt="Shanghai tower">
+
+								<%= image_tag("Shanghai_Tower.jpg", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -403,7 +414,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/Tour_des_Canadiens.JPG" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/Tour_des_Canadiens.JPG" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -412,7 +423,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/Tour_des_Canadiens.JPG" width="600" height="399" alt="Tour of canadiens">
+
+								<%= image_tag("Tour_des_Canadiens.JPG", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -438,7 +450,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/CN_Tower.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/CN_Tower.jpg" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -447,7 +459,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/CN_Tower.jpg" width="600" height="399" alt="CN tower">
+
+								<%= image_tag("CN_Tower.jpg", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -473,7 +486,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/Empire_state.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/Empire_state.jpg" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -482,7 +495,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/Empire_state.jpg" width="600" height="399" alt=" Empire state building">
+
+								<%= image_tag("Empire_state.jpg", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -508,7 +522,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/fastest_elevator.png" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/fastest_elevator.png" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -517,7 +531,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/fastest_elevator.png" width="600" height="399" alt="Fastest elevator">
+
+								<%= image_tag("fastest_elevator.png", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -543,7 +558,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/inclined_elevator.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/inclined_elevator.jpg" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -552,7 +567,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/inclined_elevator.jpg" width="600" height="399" alt="Inclined elevator">
+
+								<%= image_tag("inclined_elevator.jpg", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -578,7 +594,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/elevator_disabled.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/elevator_disabled.jpg" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -587,7 +603,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/elevator_disabled.jpg" width="600" height="399" alt="elevator for disabled people">
+
+								<%= image_tag("elevator_disabled.jpg", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -614,7 +631,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/elevator_design.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/elevator_design.jpg" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -622,7 +639,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/elevator_design.jpg" width="600" height="399" alt="best design elevator">
+
+								<%= image_tag("elevator_design.jpg", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -647,7 +665,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/Modern_elevator.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/Modern_elevator.jpg" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -656,7 +674,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/Modern_elevator.jpg" width="600" height="399" alt="Modern elevator">
+
+								<%= image_tag("Modern_elevator.jpg", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -683,7 +702,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/old_school_elevator.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/old_school_elevator.jpg" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -692,7 +711,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/old_school_elevator.jpg" width="600" height="399" alt="Old school elevator">
+
+								<%= image_tag("old_school_elevator.jpg", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -719,7 +739,7 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/nasa_elevator.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/nasa_elevator.jpg" data-plugin-options='{"type":"image"}'>
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
@@ -728,7 +748,8 @@
 									</span>
 								</span>
 
-								<img class="img-fluid" src="RocketElevatorAssets/nasa_elevator.jpg" width="600" height="399" alt="Nasa elevator">
+
+								<%= image_tag("nasa_elevator.jpg", :alt => "elevator", :class => "img-fluid", :width =>"600", :height =>"399") %>
 							</figure>
 
 							<div class="item-box-desc">
@@ -754,16 +775,15 @@
 									<span class="inner">
 
 										<!-- lightbox -->
-										<a class="ico-rounded lightbox" href="RocketElevatorAssets/water_elevator.jpg" data-plugin-options='{"type":"image"}'>
+										<a class="ico-rounded lightbox" href="/app/assets/images/water_elevator.jpg" data-plugin-options='{"type":"image"}'>
+
 											<span class="fa fa-plus fs-20"></span>
 										</a>
 
-
-
 									</span>
 								</span>
+								<%= image_tag("water_elevator.jpg", :alt => "elevator", :class => "img-fluid", :width =>"200", :height =>"399") %>
 
-								<img class="img-fluid" src="RocketElevatorAssets/water_elevator.jpg" width="600" height="399" alt="Water thru elevator">
 							</figure>
 
 							<div class="item-box-desc">
@@ -795,7 +815,8 @@
 				<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 5000, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
 					<div class="testimonial">
 						<figure>
-							<img class="rounded" src="RocketElevatorAssets/MH.jpg" alt="Picture of Mathieu Houde" />
+
+							<%= image_tag("MH.jpg", :alt => "Picture of Mathieu Houde", :class => "rounded") %>
 						</figure>
 						<div class="testimonial-content p-0">
 							<p class="lead">We are proud of our product. The elevators we make are safe, fast and have a lot of style !</p>
@@ -807,7 +828,8 @@
 					</div>
 					<div class="testimonial">
 						<figure>
-							<img class="rounded" src="RocketElevatorAssets/Doum.jpg" alt="Dominic Villemure Picture" />
+
+							<%= image_tag("Doum.jpg", :alt => "Picture of Dominic Villemure", :class => "rounded") %>
 						</figure>
 						<div class="testimonial-content p-0">
 							<p class="lead">I give my life to make the best product for you !</p>
@@ -839,7 +861,7 @@
 				<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
 					<div class="img-hover">
 						<a target="new" href="https://www.brooklynpaper.com/stories/42/3/dtg-brooklyn-museum-elevator-project-2019-01-11-bk.html">
-							<img class="img-fluid" src="RocketElevatorAssets/Brooklyn_subway.jpg" alt="Brooklyn subway">
+							<%= image_tag"Brooklyn_subway.jpg" %>
 						</a>
 
 						<h4 class="text-left mt-20"><a target="new" href="https://www.brooklynpaper.com/stories/42/3/dtg-brooklyn-museum-elevator-project-2019-01-11-bk.html">MTA
@@ -856,7 +878,7 @@
 					</div>
 					<div class="img-hover">
 						<a target="new" href="https://www.watoday.com.au/national/western-australia/details-of-chevron-s-elizabeth-quay-tower-revealed-as-development-approved-20190118-p50s5k.html">
-							<img class="img-fluid" src="RocketElevatorAssets/Chevron.webp" alt="Chevron elizabeth">
+							<%= image_tag"chevron-4-logo.png" %>
 						</a>
 
 						<h4 class="text-left mt-20"><a target="new" href="https://www.watoday.com.au/national/western-australia/details-of-chevron-s-elizabeth-quay-tower-revealed-as-development-approved-20190118-p50s5k.html">Details
@@ -876,7 +898,7 @@
 					</div>
 					<div class="img-hover">
 						<a target="new" href="https://newyorkyimby.com/2019/01/77-greenwich-rapidly-ascends-towards-500-pinnacle-in-the-financial-district.html">
-							<img class="img-fluid" src="RocketElevatorAssets/77-Greenwich.jpg" alt="">
+							<%= image_tag"77-Greenwich.jpg" %>
 						</a>
 
 						<h4 class="text-left mt-20"><a target="new" href="https://newyorkyimby.com/2019/01/77-greenwich-rapidly-ascends-towards-500-pinnacle-in-the-financial-district.html">The
@@ -896,7 +918,7 @@
 					</div>
 					<div class="img-hover">
 						<a target="new" href="https://elevatortoday.com/2014/11/27/multi-first-rope-free-elevator-system-thyssenkrupp/">
-							<img class="img-fluid" src="RocketElevatorAssets/thyssenrupp_rope_less_elevators.jpg" alt="Rope free elevator">
+							<%= image_tag"thyssenrupp_rope_less_elevators.jpg" %>
 						</a>
 
 						<h4 class="text-left mt-20"><a target="new" href="https://elevatortoday.com/2014/11/27/multi-first-rope-free-elevator-system-thyssenkrupp/">MULTI
@@ -917,8 +939,9 @@
 					</div>
 					<div class="img-hover">
 						<a target="new" href="https://elevatortoday.com/2016/01/28/worlds-tallest-moving-observation-tower/">
-							<img class="img-fluid" src="RocketElevatorAssets/Moving_tower.jpg" alt="Moving observatory tower">
+							<%= image_tag"Moving_tower.jpg" %>
 						</a>
+
 						<h4 class="text-left mt-20"><a target="new" href="https://elevatortoday.com/2016/01/28/worlds-tallest-moving-observation-tower/">Moving
 								Tower</a></h4>
 						<p class="text-left">People who love London Eye will have soon available another attraction called British
@@ -936,7 +959,7 @@
 					</div>
 					<div class="img-hover">
 						<a target="new" href="https://elevatortoday.com/2018/10/02/otis-gen2-car-special-antimicrobial-features/">
-							<img class="img-fluid" src="RocketElevatorAssets/Otis2_widejpg.jpg" alt="Antimicrobial elevator cages">
+							<%= image_tag"Otis2_widejpg.jpg" %>
 						</a>
 						<h4 class="text-left mt-20"><a target="new" href="https://elevatortoday.com/2018/10/02/otis-gen2-car-special-antimicrobial-features/">Otis
 								Gen2 Car with Special Antimicrobial Features</a></h4>
@@ -975,66 +998,62 @@
 				<ul class="row clients-dotted list-inline">
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.nhl.com/fr/canadiens">
-						
-					<%= image_tag "CH_logo.png" %>
-	
+							<%= (image_tag"CH_logo.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299") %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="http://www.consortiummr.com/">
-						<%= image_tag "ConsortiumMR-logo.png" %>
-							
+							<%= (image_tag"ConsortiumMR-logo.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299") %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.dell.com/fr-ca">
-						<%= image_tag "Dell_logo_tranparent.png" %>
-							
+							<%= (image_tag"Dell_logo_tranparent.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.microsoft.com">
-							<img class="img-fluid" src="RocketElevatorAssets/microsoft-logo-morph.gif" alt="Microsoft logo" />
+							<%= (image_tag"microsoft-logo-morph.gif", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.google.ca">
-							<img class="img-fluid" src="RocketElevatorAssets/Google_logo_transparent.png" alt="Google logo gif" />
+							<%= (image_tag"Google_logo_transparent.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.nasa.gov/">
-							<img class="img-fluid" src="RocketElevatorAssets/Nasa_logo_transparent.png" alt="Nasa logo" />
+							<%= (image_tag"Nasa_logo_transparent.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.apple.com/">
-							<img class="img-fluid" src="RocketElevatorAssets/apple_logo_transparent.svg" alt="Apple logo" />
+							<%= (image_tag"apple_logo_transparent.svg", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="http://www.ccb.com/en/home/indexv3.html">
-							<img class="img-fluid" src="RocketElevatorAssets/china-construction-bank-logo.png" alt="CCB logo" />
+							<%= (image_tag"china-construction-bank-logo.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.chevron.com/">
-							<img class="img-fluid" src="RocketElevatorAssets/chevron-4-logo.png" alt="Chevron logo" />
+							<%= (image_tag"chevron-4-logo.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.cn.ca/fr/">
-							<img class="img-fluid" src="RocketElevatorAssets/cn-logo-logo.png" alt="CN logo" />
+							<%= (image_tag"cn-logo-logo.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.samsung.com">
-							<img class="img-fluid" src="RocketElevatorAssets/Samsung_logo_transparent.png" alt="Samsung logo" />
+							<%= (image_tag"Samsung_logo_transparent.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 					<li class="col-md-3 col-sm-3 col-6">
 						<a target="new" href="https://www.trump.com/">
-							<img class="img-fluid" src="RocketElevatorAssets/Trump_organization_transparent.png" alt="Trump organization logo" />
+							<%= (image_tag"Trump_organization_transparent.png", :alt => "elevator", :class => "img-fluid", :width =>"400", :height =>"299")  %>
 						</a>
 					</li>
 				</ul>
@@ -1160,7 +1179,8 @@
 
 							<div class="row">
 								<div class="col-md-12">
-									<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND YOUR INFORMATIONS </button>
+									<button type="submit" class="btn btn-primary"><i class="fa fa-check"> </i> SEND YOUR INFORMATIONS
+									</button>
 								</div>
 							</div>
 						</form>
@@ -1259,7 +1279,6 @@
 	<!-- SCROLL TO TOP -->
 	<a href="#" id="toTop"></a>
 
-
 	<!-- PRELOADER -->
 	<div id="preloader">
 		<div class="inner">
@@ -1267,22 +1286,25 @@
 		</div>
 	</div><!-- /PRELOADER -->
 
-	<!-- JAVASCRIPT FILES -->
-	<script>
+	<!-- <script>
 		var plugin_path = 'assets/plugins/';
-	</script>
-	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+	</script> -->
 
-	<script src="assets/js/scripts.js"></script>
+
+
+	<script src="/assets/scripts.js"></script>
 
 
 
 	<!-- REVOLUTION SLIDER -->
-	<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
-	<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
-	<script src="assets/js/view/demo.revolution_slider.js"></script>
+	<%# <script src="/assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script src="/assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="/assets/view/demo.revolution_slider.js"></script> %>
+	
 
+	
 
 </body>
+	
 
 </html>
