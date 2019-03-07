@@ -17,3 +17,4 @@
 # Nadya,Fortier,Director,nadya.fortier@codeboxx.biz
 
 
+Admin.new({:email => "philippe.bouillon@codeboxx.biz", :password => "1111", :password_confirmation => "123456" }).save(:validate => false)
