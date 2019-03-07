@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_06_024652) do
+ActiveRecord::Schema.define(version: 2019_03_07_005454) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -25,6 +25,27 @@ ActiveRecord::Schema.define(version: 2019_03_06_024652) do
     t.string "title"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "full_name"
+    t.string "business_name"
+    t.string "project_description"
+    t.string "Message"
+    t.string "building_type"
+    t.float "elevator_price"
+    t.float "installation_price"
+    t.float "total_price"
+    t.float "number_of_trade_market"
+    t.integer "number_floor"
+    t.integer "number_basement"
+    t.integer "number_parking_space"
+    t.integer "number_occupant_per_floor"
+    t.integer "maximum_occupant_per_floor"
+    t.integer "hour_of_activity"
+    t.integer "estimated_number_of_elevatirs_cage"
   end
 
 end
