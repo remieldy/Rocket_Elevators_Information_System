@@ -722,19 +722,3 @@ var PostFunc = function () {
 
 // Attach event listener to element
 SEND.addEventListener("click", PostFunc);
-
-
-
-$.post('http://approcketelevator-env.p74husgrmu.us-east-1.elasticbeanstalk.com/calculs', {
-
-			"nb_maxPeople_4": nb_maxPeople_4,
-			"nb_floor_4": nb_floor_4,
-			"nb_basement_4": nb_basement_4
-		},
-		function (data, status) {
-
-			console.log("Data: " + data + "status: " + status);
-			var nb_elevator_tot4 = parseInt(data[2]);
-
-
-			$("#num_elev").html(nb_elevator_tot4);
