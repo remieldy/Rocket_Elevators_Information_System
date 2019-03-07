@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get 'RocketElevatorsWebpage_Corporate.html' => 'pages#RocketElevatorsWebpage_Corporate.html'
   get 'RocketElevatorsWebpage_submission.html' => 'pages#RocketElevatorsWebpage_submission.html'
   get 'login.html' => 'pages#login.html'
+  get 'employee' => 'pages#admin/login'
 
 end
