@@ -4,8 +4,62 @@ jQuery(_hash).show();
 
 onload
 
-// CELLS PART ------------------------------------------------------------------
 
+var NBAPP = 0;
+var NBFLOOR = 0;
+var NBBASEMENT = 0;
+var NBDISTINCTT = 0;
+var NBDISTINCTB = 0;
+var NBPARKING = 0;
+var MAXPERFLOOR = 0;
+var NBTRADES = 0;
+var NBCAGES = 0;
+var HRACTIVITY = 0;
+var ID = 0;
+var BUILDINGTYPE = "Residential";
+var Qual = "Standard";
+var TOTESTIMATE = 0;
+
+
+
+// NAME AND PHONE NUMBER ------------------------------------------------------
+
+//Elements to put events on (the 2 cells)
+var Name = document.getElementById("full_name").value;
+var PhoneNumber = document.getElementById("phone_number").value;
+
+// Step 2: Define the event listener function
+function NameAndPhone() {
+	Name = document.getElementById("full_name").value
+	PhoneNumber = document.getElementById("phone_number").value
+	console.log(Name, PhoneNumber)
+}
+
+function Qual1() {
+	Qual = "Standard"
+	console.log(Qual)
+}
+
+function Qual2() {
+	Qual = "Premium"
+	console.log(Qual)
+}
+
+function Qual3() {
+	Qual = "Excelium"
+	console.log(Qual)
+}
+
+// Attach event listener to element
+full_name.addEventListener("keyup", NameAndPhone);
+phone_number.addEventListener("keyup", NameAndPhone);
+
+
+// NAME AND PHONE NUMBER ------------------------------------------------------
+
+
+
+// CELLS PART ------------------------------------------------------------------
 // Hiding all department
 
 
@@ -39,6 +93,20 @@ var department = function () {
 		quality1_check.addEventListener("click", residential_funct);
 		quality2_check.addEventListener("click", residential_funct);
 		quality3_check.addEventListener("click", residential_funct);
+		quality1_check.addEventListener("click", Qual1);
+		quality2_check.addEventListener("click", Qual2);
+		quality3_check.addEventListener("click", Qual3);
+		NBAPP = nb_app1;
+		NBFLOOR = nb_floor1;
+		NBBASEMENT = nb_basement1;
+		NBDISTINCT = 0;
+		NBPARKING = 0;
+		MAXPERFLOOR = 0;
+		NBTRADES = 0;
+		NBCAGES = 0;
+		HRACTIVITY = 0;
+		BUILDINGTYPE = "Residential";
+
 	}
 
 	if (building_1 === "Commercial") {
@@ -50,6 +118,19 @@ var department = function () {
 		quality1_check.addEventListener("click", commercial_funct);
 		quality2_check.addEventListener("click", commercial_funct);
 		quality3_check.addEventListener("click", commercial_funct);
+		quality1_check.addEventListener("click", Qual1);
+		quality2_check.addEventListener("click", Qual2);
+		quality3_check.addEventListener("click", Qual3);
+		NBAPP = 0;
+		NBFLOOR = nb_floor3;
+		NBBASEMENT = nb_basement3;
+		NBDISTINCTB = nb_trade3;
+		NBPARKING = nb_parking3;
+		MAXPERFLOOR = 0;
+		NBTRADES = 0;
+		NBCAGES = nb_cage_deploy3;
+		HRACTIVITY = 0;
+		BUILDINGTYPE = "Commercial";
 	}
 
 	if (building_1 === "Corporate") {
@@ -61,6 +142,19 @@ var department = function () {
 		quality1_check.addEventListener("click", corporate_funct);
 		quality2_check.addEventListener("click", corporate_funct);
 		quality3_check.addEventListener("click", corporate_funct);
+		quality1_check.addEventListener("click", Qual1);
+		quality2_check.addEventListener("click", Qual2);
+		quality3_check.addEventListener("click", Qual3);
+		NBAPP = 0;
+		NBFLOOR = nb_floor2;
+		NBBASEMENT = nb_basement2;
+		NBDISTINCTB = dist_loca_2;
+		NBPARKING = nb_parking2;
+		MAXPERFLOOR = nb_maxPeople_2;
+		NBTRADES = 0;
+		NBCAGES = 0;
+		HRACTIVITY = 0;
+		BUILDINGTYPE = "Corporate";
 	}
 
 	if (building_1 === "Hybrid") {
@@ -72,6 +166,19 @@ var department = function () {
 		quality1_check.addEventListener("click", hybrid_funct);
 		quality2_check.addEventListener("click", hybrid_funct);
 		quality3_check.addEventListener("click", hybrid_funct);
+		quality1_check.addEventListener("click", Qual1);
+		quality2_check.addEventListener("click", Qual2);
+		quality3_check.addEventListener("click", Qual3);
+		NBAPP = 0;
+		NBFLOOR = nb_floor4;
+		NBBASEMENT = nb_basement4;
+		NBDISTINCTB = dist_busi_4;
+		NBPARKING = nb_parking4;
+		MAXPERFLOOR = nb_maxPeople4;
+		NBTRADES = 0;
+		NBCAGES = 0;
+		HRACTIVITY = hr_activity4;
+		BUILDINGTYPE = "Hybrid";
 
 	}
 
@@ -83,10 +190,6 @@ var department = function () {
 		hybrid_funct();
 	}
 
-
-
-
-
 }
 
 
@@ -94,6 +197,7 @@ var department = function () {
 // Step 3: Attach event listener to element	
 
 choice.addEventListener("change", department);
+
 
 
 
@@ -124,19 +228,17 @@ var quality3_check = document.getElementById("Excelium");
 
 
 
-
-
 // Residential function
 var residential_funct = function () {
 
-	var nb_app = parseInt(document.getElementById("nb-app").value);
+	nb_app = parseInt(document.getElementById("nb-app").value);
 	console.log(nb_app + "numbers of appartments");
 
 
-	var nb_floor = parseInt(document.getElementById("nb-floor").value);
+	nb_floor = parseInt(document.getElementById("nb-floor").value);
 	console.log(nb_floor + "numbers of floors");
 
-	var nb_basement = parseInt(document.getElementById("nb-basement").value);
+	nb_basement = parseInt(document.getElementById("nb-basement").value);
 	console.log(nb_basement + "numbers of basements");
 
 
@@ -226,11 +328,11 @@ nb_basement1.addEventListener("keyup", residential_funct);
 
 
 //Elements to put events on (the 5 cells)
-var dist_loca2 = document.getElementById("dist-loca2");
+var dist_loca_2 = document.getElementById("dist-loca2");
 var nb_floor2 = document.getElementById("nb-floor2");
 var nb_basement2 = document.getElementById("nb-basement2");
 var nb_parking2 = document.getElementById("nb-parking2");
-var nb_maxPeople2 = document.getElementById("nb-maxPeople2");
+var nb_maxPeople_2 = document.getElementById("nb-maxPeople2");
 var quality_check = document.getElementById("Quality");
 
 
@@ -238,19 +340,19 @@ var quality_check = document.getElementById("Quality");
 var corporate_funct = function () {
 
 
-	var dist_loca_2 = parseInt(document.getElementById("dist-loca2").value);
+	dist_loca_2 = parseInt(document.getElementById("dist-loca2").value);
 	console.log(dist_loca_2 + "numbers of distinct Business 2");
 
-	var nb_floor_2 = parseInt(document.getElementById("nb-floor2").value);
+	nb_floor_2 = parseInt(document.getElementById("nb-floor2").value);
 	console.log(nb_floor_2 + "numbers of floors 2");
 
-	var nb_basement_2 = parseInt(document.getElementById("nb-basement2").value);
+	nb_basement_2 = parseInt(document.getElementById("nb-basement2").value);
 	console.log(nb_basement_2 + "numbers of bassement 2");
 
-	var nb_parking_2 = parseInt(document.getElementById("nb-parking2").value);
+	nb_parking_2 = parseInt(document.getElementById("nb-parking2").value);
 	console.log(nb_parking_2 + "numbers of floors 2");
 
-	var nb_maxPeople_2 = parseInt(document.getElementById("nb-maxPeople2").value);
+	nb_maxPeople_2 = parseInt(document.getElementById("nb-maxPeople2").value);
 	console.log(nb_maxPeople_2 + "numbers of floors 2");
 
 
@@ -342,11 +444,11 @@ var corporate_funct = function () {
 
 
 // Attach event listener to element
-dist_loca2.addEventListener("keyup", corporate_funct);
+dist_loca_2.addEventListener("keyup", corporate_funct);
 nb_floor2.addEventListener("keyup", corporate_funct);
 nb_basement2.addEventListener("keyup", corporate_funct);
 nb_parking2.addEventListener("keyup", corporate_funct);
-nb_maxPeople2.addEventListener("keyup", corporate_funct);
+nb_maxPeople_2.addEventListener("keyup", corporate_funct);
 
 
 // CORPORATE CALCULS END-------------------------------------------------------
@@ -364,7 +466,13 @@ var quality_check = document.getElementById("Quality");
 
 // Commercial function
 var commercial_funct = function () {
-	var nb_cage_deploy3 = parseInt(document.getElementById("nb-cage-deploy3").value);
+
+	nb_trade3 = document.getElementById("nb-trade3").value;
+	nb_floor3 = document.getElementById("nb-floor3").value;
+	nb_basement3 = document.getElementById("nb-basement3").value;
+	nb_parking3 = document.getElementById("nb-parking3").value;
+	nb_cage_deploy3 = document.getElementById("nb-cage-deploy3").value;
+
 	console.log(nb_cage_deploy3 + "numbers of cage deploy 3");
 
 	var Quality_check = document.getElementById("Quality").value
@@ -440,11 +548,12 @@ nb_cage_deploy3.addEventListener("keyup", commercial_funct);
 // HYBRID CALCULS ------------------------------------------------------------
 
 //Elements to put events on (the 5 cells)
-var dist_busi4 = document.getElementById("dist-busi4");
+var dist_busi_4 = document.getElementById("dist-busi4");
 var nb_floor4 = document.getElementById("nb-floor4");
 var nb_basement4 = document.getElementById("nb-basement4");
 var nb_parking4 = document.getElementById("nb-parking4");
 var nb_people4 = document.getElementById("nb-people4");
+var nb_maxPeople_4 = document.getElementById("nb-people4");
 var hr_activity4 = document.getElementById("hr-activity4");
 var quality_check = document.getElementById("Quality");
 
@@ -452,23 +561,24 @@ var quality_check = document.getElementById("Quality");
 // HYBRID function
 var hybrid_funct = function () {
 
+	nb_maxPeople_4 = document.getElementById("nb-people4").value;
 
-	var dist_busi_4 = parseInt(document.getElementById("dist-busi4").value);
+	dist_busi_4 = parseInt(document.getElementById("dist-busi4").value);
 	console.log(dist_busi_4 + "numbers of distinct Business 4");
 
-	var nb_floor_4 = parseInt(document.getElementById("nb-floor4").value);
+	nb_floor_4 = parseInt(document.getElementById("nb-floor4").value);
 	console.log(nb_floor_4 + "numbers of floors 4");
 
-	var nb_basement_4 = parseInt(document.getElementById("nb-basement4").value);
+	nb_basement_4 = parseInt(document.getElementById("nb-basement4").value);
 	console.log(nb_basement_4 + "numbers of bassement 4");
 
-	var nb_parking_4 = parseInt(document.getElementById("nb-parking4").value);
+	nb_parking_4 = parseInt(document.getElementById("nb-parking4").value);
 	console.log(nb_parking_4 + "numbers of parking 4");
 
-	var nb_people_4 = parseInt(document.getElementById("nb-people4").value);
+	nb_people_4 = parseInt(document.getElementById("nb-people4").value);
 	console.log(nb_people_4 + "numbers of people per floor 4");
 
-	var hr_activity_4 = parseInt(document.getElementById("hr-activity4").value);
+	hr_activity_4 = parseInt(document.getElementById("hr-activity4").value);
 	console.log(hr_activity_4 + "Hours of activity 4");
 
 
@@ -525,7 +635,6 @@ var hybrid_funct = function () {
 		document.getElementById("num_elev").innerHTML = nb_elevator_tot;
 	}
 
-
 	document.getElementById("error10_txt").style.display = 'none';
 	document.getElementById("error11_txt").style.display = 'none';
 	document.getElementById("error12_txt").style.display = 'none';
@@ -573,9 +682,8 @@ var hybrid_funct = function () {
 
 }
 
-
 // Attach event listener to element
-dist_busi4.addEventListener("keyup", hybrid_funct);
+dist_busi_4.addEventListener("keyup", hybrid_funct);
 nb_floor4.addEventListener("keyup", hybrid_funct);
 nb_basement4.addEventListener("keyup", hybrid_funct);
 nb_parking4.addEventListener("keyup", hybrid_funct);
@@ -584,3 +692,33 @@ hr_activity4.addEventListener("keyup", hybrid_funct);
 
 
 //HYBRID CALCULS END --------------------------------------------------------
+
+
+var SEND = document.getElementById("send");
+
+var sendingQuote = {
+	"FullName": Name,
+	"PhoneNumber": PhoneNumber,
+	"NbApp": NBAPP,
+	"NbFloor": NBFLOOR,
+	"NbBasement": NBBASEMENT,
+	"NbDistinctB": NBBASEMENT,
+	"NbParking": NBPARKING,
+	"MaxPerFloor": MAXPERFLOOR,
+	"NbTrades": NBTRADES,
+	"NbCages": NBCAGES,
+	"HrActivity": HRACTIVITY,
+	"BuildingType": BUILDINGTYPE,
+	"Quality": Qual,
+	"TotEstimate": TOTESTIMATE,
+	"NbDistinctT": NBDISTINCTT
+}
+
+
+var PostFunc = function () {
+
+
+}
+
+// Attach event listener to element
+SEND.addEventListener("click", PostFunc);
