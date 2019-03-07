@@ -14,13 +14,4 @@
 //= require jquery
 //= require rails-ujs
 //= require bootstrap
-//= require plugins/jquery/jquery-3.3.1.min
-//= require scripts
-
-//= require plugins/slider.revolution/js/jquery.themepunch.tools.min
-//= require plugins/slider.revolution/js/jquery.themepunch.revolution.min
-//= require demo.revolution_slider
-//= require contact
-//= require plugins/bootstrap/js/bootstrap.min
-//= require demo.portfolio_ajax
-//= require plugins/owl-carousel/owl.carousel
+//= require_tree ./plugins

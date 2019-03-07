@@ -17,8 +17,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 
-	<!-- CORE CSS -->
-	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	  <!-- CORE CSS -->
+	 <%# <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 	<!-- REVOLUTION SLIDER -->
 	<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
@@ -32,8 +32,8 @@
 
 	<!-- PAGE LEVEL SCRIPTS -->
 	<link href="assets/css/header-2.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/color_scheme/lightgrey.css" rel="stylesheet" type="text/css" id="color_scheme" />
-</head>
+	<link href="assets/css/color_scheme/lightgrey.css" rel="stylesheet" type="text/css" id="color_scheme" />  %>
+</head> 
 
 <body class="smoothscroll enable-animation">
 
@@ -142,11 +142,12 @@
 
 
 				<div class="row">
+				<h2 class="col-sm-6">(STEP 1) YOUR INFO </h2>
 
 					<!-- FORM -->
 					<div style="margin:2% ; padding:0%" class="col-md-9 ">
 
-						<h2 class="col-sm-6">(STEP 1) YOUR INFO </h2>
+						
 
 
 						<!-- Alert Success -->
@@ -267,13 +268,12 @@
 
 
 			<div class="row">
+			<h2 class="col-sm-6">(STEP 2) GET YOUR SUBMISSION </h2>
 
 				<!-- FORM -->
 				<div style="margin:2% ; padding:0%" class="col-md-9">
 
-					<h2 class="col-sm-6">(STEP 2) GET YOUR SUBMISSION </h2>
-
-
+				
 					<!-- Alert Success -->
 					<div id="alert_success" class="alert alert-success mb-30">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -306,7 +306,7 @@
 										<p> Select Your Building Type </p>
 										</p>
 									</label>
-									<select class="whatisit" id="building_type" name="contact[department]">
+									<select class="btn btn-primary" id="building_type" name="contact[department]">
 										<option value="Select">--- Select ---</option>
 										<option value="Residential">Residential</option>
 										<option value="Corporate">Corporate</option>
@@ -535,7 +535,7 @@
 					<li><a href="#"></a></li>
 
 					<li><a href="#">(418)580-7055</a></li>
-					<li><a href="login.html">Login</a></li>
+					<li><a href="admin">Login</a></li>
 				</ul>
 				WHY US ? Because we are the best in the elevators technology.
 			</div>
@@ -570,18 +570,19 @@
 	<!-- JAVASCRIPT FILES -->
 	<script>
 		var plugin_path = 'assets/plugins/';
-	</script>
+	</script> 
+	
 	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
-	<script src="assets/js/scripts.js"></script>
+	<script src="/assets/scripts.js"></script>
 
 
 
-	<!-- REVOLUTION SLIDER -->
+	<%# <!-- REVOLUTION SLIDER -->
 	<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
 	<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
-	<script src="assets/js/view/demo.revolution_slider.js"></script>
-	<script src="assets/js/contact_withNode.js"></script>
+	<script src="assets/js/view/demo.revolution_slider.js"></script> %>
+	<script src="/assets/contact.js"></script>
 
 </body>
 
