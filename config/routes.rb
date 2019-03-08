@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Rails.application.routes.draw do
   resources :logins
   resources :test_airtons
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'login.html' => 'pages#login.html'
 
 end
-=======
+
 Rails.application.routes.draw do
   devise_for :admin, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -29,4 +29,4 @@ Rails.application.routes.draw do
   get 'employee' => 'pages#admin/login'
 
 end
->>>>>>> 8745fa3de918e462b2518c4279b1443e8b9179dc
+
