@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: DoumApp_production
+  database: dominic_villemure_prod
   username: DoumApp
   password: <%= ENV['root'] %>

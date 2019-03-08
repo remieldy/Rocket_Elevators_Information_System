@@ -116,6 +116,12 @@
 								</li>
 
 								<li>
+									<!-- ADMIN -->
+									<a href="admin">LOGIN</a>
+
+								</li>
+
+								<li>
 									<!-- CONTACT US -->
 									<a href="index.html#footer">
 										CONTACT US
@@ -136,122 +142,7 @@
 		</div>
 
 
-		<!-- FOOTER INFO-->
-		<footer id="footer">
-			<div class="wide">
-
-
-				<div class="row">
-				<h2 class="col-sm-6">(STEP 1) YOUR INFO </h2>
-
-					<!-- FORM -->
-					<div style="margin:2% ; padding:0%" class="col-md-9 ">
-
-						
-
-
-						<!-- Alert Success -->
-						<div id="alert_success" class="alert alert-success mb-30 ">
-							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-							<strong>Thank You!</strong> Your message successfully sent!
-						</div><!-- /Alert Success -->
-
-
-						<!-- Alert Failed -->
-						<div id="alert_failed" class="alert alert-danger mb-30">
-							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-							<strong>[SMTP] Error!</strong> Internal server error!
-						</div><!-- /Alert Failed -->
-
-
-						<!-- Alert Mandatory -->
-						<div id="alert_mandatory" class="alert alert-danger mb-30">
-							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-							<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-						</div><!-- /Alert Mandatory -->
-
-
-						<form class="col-sm-6" action="php/contact.php" method="post" enctype="multipart/form-data">
-							<fieldset>
-								<input type="hidden" name="action" value="contact_send" />
-
-								<div class="row">
-
-
-
-									<div class="col-md-4">
-										<label for="contact:phone">Full Name <strong href="#" data-toggle="tooltip" title="Name, Last Name">(?)</strong></label>
-										<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
-									</div>
-
-
-
-
-								</div>
-								<div class="row">
-									<div class="col-md-8">
-										<label for="contact:subject">Name of your business </label>
-										<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
-									</div>
-
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<label for="contact:message">Description of the project </label>
-										<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
-									</div>
-
-									<div class="col-md-12">Message </label>
-										<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<label for="contact:attachment">File Attachment <strong href="#" data-toggle="tooltip" title="Don't send nudes">(?)</strong></label>
-
-										<!--custom file upload -->
-										<input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="contact:attachment"
-										 data-btn-text="Select a File" />
-										<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
-
-									</div>
-								</div>
-
-							</fieldset>
-
-							<div class="row">
-								<div class="col-md-12">
-									<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND YOUR INFORMATIONS</button>
-								</div>
-							</div>
-
-
-						</form>
-
-					</div>
-
-
-
-					<!-- /INFO -->
-
-
-				</div>
-
-			</div>
-			</section>
-			<!-- / -->
-
-
-
-
-
-
-	</div>
-
-
-	</div>
-
-	<section class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-40 p-40 " style="background-image: url('RocketElevatorAssets/AdobeStock_103570025.jpeg');">
+	<section class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-40 p-40 " style="background-image: url('/assets/AdobeStock_103570025.jpeg');">
 		<span class="font-lato fs-30" style="color:rgb(300, 300, 300)">
 			For the best elevators,
 			<strong> Rocket Elevators ! </strong>
@@ -267,11 +158,13 @@
 		<div class="wide">
 
 
-			<div class="row">
-			<h2 class="col-sm-6">(STEP 2) GET YOUR SUBMISSION </h2>
+			<div class="row" style="margin:2%">
+			<h2 class="col-sm-6">GET YOUR SUBMISSION </h2>
+
+				
 
 				<!-- FORM -->
-				<div style="margin:2% ; padding:0%" class="col-md-9">
+				<div style="margin:0% ; padding:0%" class="col-md-9">
 
 				
 					<!-- Alert Success -->
@@ -294,6 +187,27 @@
 						<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
 					</div><!-- /Alert Mandatory -->
 
+				
+					<form class="col-sm-8" action="php/contact.php" method="post" enctype="multipart/form-data">
+							<fieldset>
+								<input type="hidden" name="action" value="contact_send" />
+
+								<div class="row" style="margin:-3% ; padding:0%" >
+									<div class="col-md-9">
+										 <label for="contact:phone">Full Name <strong href="#" data-toggle="tooltip" title="Name, Last Name">(?)</strong></label>
+                                         <input required type="text" value="" class="form-control" name="FullName" id="full_name">
+									</div>
+								</div>
+
+								<div class="row" style="margin:-3% ; padding:0%" >
+									<div class="col-md-9">
+										 <label for="contact:phone">Phone Number <strong href="#" data-toggle="tooltip" title="Phone Number">(?)</strong></label>
+                                         <input required type="number" value="" class="form-control" name="FullName" id="phone_number">
+									</div>
+								</div>
+							</fieldset>
+
+						</form>
 
 					<form class="col-sm-6" id="to_form" action="php/contact.php" method="post" enctype="multipart/form-data">
 						<fieldset>
@@ -378,8 +292,8 @@
 									<input required type="Number" value="" class="form-control" name="contact[subject][required]" id="nb-parking3">
 								</div>
 
-								<div class="col-md-10">
-									<label for="contact:subject">Numbers of cages to deploy <strong href="#" data-toggle="tooltip" title="Your estimate on the total number of elevator cages your building need.">(?)</strong></label>
+								<div class="col-md-5">
+									<label for="contact:subject">Numbers of cages to deploy </label>
 									<input required type="Number" value="" class="form-control" name="contact[subject][required]" id="nb-cage-deploy3">
 									<span id="error9_txt" style="color:red"></span>
 								</div>
@@ -462,6 +376,9 @@
 								</div>
 							</div>
 
+							
+
+
 
 				</div>
 				</fieldset>
@@ -506,7 +423,7 @@
 
 						<hr />
 
-						<button class="btn btn-primary btn-lg btn-block fs-15"><i class="fa fa-mail-forward"></i> SEND YOUR SUBMISSION</button>
+						<button id="send" class="btn btn-primary btn-lg btn-block fs-15"><i class="fa fa-mail-forward"></i> SEND YOUR SUBMISSION</button>
 					</div>
 				</div>
 			</div>
@@ -535,7 +452,7 @@
 					<li><a href="#"></a></li>
 
 					<li><a href="#">(418)580-7055</a></li>
-					<li><a href="admin">Login</a></li>
+					<li><a href="login.html">Login</a></li>
 				</ul>
 				WHY US ? Because we are the best in the elevators technology.
 			</div>
@@ -568,7 +485,7 @@
 
 
 	<!-- JAVASCRIPT FILES -->
-	<script>
+<script>
 		var plugin_path = 'assets/plugins/';
 	</script> 
 	
