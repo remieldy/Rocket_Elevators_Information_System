@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get 'RocketElevatorsWebpage_submission.html' => 'pages#RocketElevatorsWebpage_submission.html'
   get 'login.html' => 'pages#login.html'
   get 'employee' => 'pages#admin/login'
+  get "quotes" => "pages#index"
+  resources :quotes
 
 end
