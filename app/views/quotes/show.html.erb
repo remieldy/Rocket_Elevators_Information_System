@@ -1,3 +1,6 @@
+
+<%= render partial: "partial" %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -24,22 +27,6 @@
   <strong>Total Estimation:</strong>
   <%= @quote.total_price %>
 </p>
-
-<%= @quote.installation_price %>
-<%= @quote.elevator_price %>
-<%= @quote.quality %>
-<%= @quote.installation_price %>
-<%= @quote.number_floor %>
-<%= @quote.number_appartment %>
-<%= @quote.number_basement %>
-<%= @quote.number_parking_space %>
-<%= @quote.maximum_occupant_per_floor %>
-<%= @quote.hour_of_activity %>
-<%= @quote.number_of_elevators_cage %>
-<%= @quote.number_of_trade_market %>
-<%= @quote.number_of_distinct_business %>
-
-
 
 <%= link_to 'Edit', edit_quote_path(@quote) %> |
 <%= link_to 'Back', quotes_path %>
