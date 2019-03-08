@@ -381,18 +381,21 @@
 					<div class="toggle-content">
 
 						<span class="clearfix">
-							<span id="solo_estimate" name="elevator_price" class="float-right"> 0$ </span>
+							<span id="solo_estimate" name="elevator_prices" class="float-right"> 0$ </span>
+							<input required type="Number" id ="solo_estimate_fake" name="elevator_price">
 							<span class="float-left">Price per elevator: <strong href="#tobot" data-toggle="tooltip" title="Price for 1 elevator">(?)</strong></span>
 						</span>
 
 						<span class="clearfix">
-							<span id="inst_fee" name="installation_price" class="float-right"> 0$ </span>
+							<span id="inst_fee" name="installation_prices" class="float-right"> 0$ </span>
+							<input required type="Number" id ="inst_fee_fake" name="installation_price">
 							<span class="float-left">Installation fee per elevator: <strong href="#tobot" data-toggle="tooltip" title="Installation fee for 1 elevator">(?)</strong></span>
 						</span>
 
 
 						<span class="clearfix">
-							<span id="num_elev" name="number_elevator" class="float-right"> 0 </span>
+							<span id="num_elev" name="number_elevators" class="float-right"> 0 </span>
+							<input required type="Number" id ="num_elev_fake" name="number_elevator"> 
 							<strong class="float-left">Numbers of Elevators Needed:</strong>
 						</span>
 
@@ -400,7 +403,8 @@
 
 						<span class="clearfix">
 							<span class="float-right fs-20">
-								<p id="tot_estimate" name="total_price"> 0$ </p>
+								<p id="tot_estimate" name="total_prices"> 0$ </p>
+								<input required type="Number" id ="tot_estimate_fake" name="total_price"> 
 							</span>
 							<strong class="float-left"> TOTAL ESTIMATE:</strong>
 
@@ -412,10 +416,10 @@
 				</div>
 			</div>
 
-				</div>
-				</fieldset>
-				</form>
-			</div>
+		</div>
+		</fieldset>
+		</form>
+	</div>
 			<!-- CALCULATION SECTION -->
 
 			<!-- /INFO -->

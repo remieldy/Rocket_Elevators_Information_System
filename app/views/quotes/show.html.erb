@@ -25,7 +25,7 @@
   <%= @quote.total_price %>
 </p>
 
-
+<%= @quote.installation_price %>
 <%= @quote.elevator_price %>
 <%= @quote.quality %>
 <%= @quote.installation_price %>
@@ -38,6 +38,7 @@
 <%= @quote.number_of_elevators_cage %>
 <%= @quote.number_of_trade_market %>
 <%= @quote.number_of_distinct_business %>
+
 
 
 <%= link_to 'Edit', edit_quote_path(@quote) %> |

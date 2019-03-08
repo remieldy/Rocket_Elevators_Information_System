@@ -29,6 +29,10 @@ class QuotesController < ApplicationController
 
       if params[:building_type] == "Residential" 
         @quote.quality = params[:quality]
+        @quote.elevator_price = params[:elevator_price]
+        @quote.installation_price = params[:installation_price]
+        @quote.number_elevator = params[:number_elevator]
+        @quote.total_price = params[:total_price]
       end
 
       if params[:building_type] == "Commercial" 
@@ -36,6 +40,10 @@ class QuotesController < ApplicationController
         @quote.number_floor = params[:number_floor2]
         @quote.number_basement = params[:number_basement2]
         @quote.number_parking_space = params[:number_parking_space2]
+        @quote.elevator_price = params[:elevator_price]
+        @quote.installation_price = params[:installation_price]
+        @quote.number_elevator = params[:number_elevator]
+        @quote.total_price = params[:total_price]
       end
 
       if params[:building_type] == "Corporate" 
@@ -45,6 +53,10 @@ class QuotesController < ApplicationController
         @quote.number_of_distinct_business = params[:number_of_distinct_business3]
         @quote.number_parking_space = params[:number_parking_space3]
         @quote.maximum_occupant_per_floor = params[:maximum_occupant_per_floor3]
+        @quote.elevator_price = params[:elevator_price]
+        @quote.installation_price = params[:installation_price]
+        @quote.number_elevator = params[:number_elevator]
+        @quote.total_price = params[:total_price]
       end
 
       if params[:building_type] == "Hybrid" 
@@ -54,6 +66,10 @@ class QuotesController < ApplicationController
         @quote.number_of_distinct_business = params[:number_of_distinct_business4]
         @quote.number_parking_space = params[:number_parking_space4]
         @quote.maximum_occupant_per_floor = params[:maximum_occupant_per_floor4]
+        @quote.elevator_price = params[:elevator_price]
+        @quote.installation_price = params[:installation_price]
+        @quote.number_elevator = params[:number_elevator]
+        @quote.total_price = params[:total_price]
       end
 
 
