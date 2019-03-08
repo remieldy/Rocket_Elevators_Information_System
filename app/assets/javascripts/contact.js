@@ -694,7 +694,6 @@ hr_activity4.addEventListener("keyup", hybrid_funct);
 //HYBRID CALCULS END --------------------------------------------------------
 
 
-var SEND = document.getElementById("send");
 
 var sendingQuote = {
 	"FullName": Name,
@@ -714,11 +713,93 @@ var sendingQuote = {
 	"NbDistinctT": NBDISTINCTT
 }
 
+// app\controllers\application_controller.rb
 
-var PostFunc = function () {
+$("#send").click(function () {
+	if (building_1 === "Residential") {
+		NBAPP = nb_app1;
+		NBFLOOR = nb_floor1;
+		NBBASEMENT = nb_basement1;
+		NBDISTINCT = 0;
+		NBPARKING = 0;
+		MAXPERFLOOR = 0;
+		NBTRADES = 0;
+		NBCAGES = 0;
+		HRACTIVITY = 0;
+		BUILDINGTYPE = "Residential";
+	}
 
+	if (building_1 === "Commercial") {
+		NBAPP = 0;
+		NBFLOOR = nb_floor3;
+		NBBASEMENT = nb_basement3;
+		NBDISTINCTB = nb_trade3;
+		NBPARKING = nb_parking3;
+		MAXPERFLOOR = 0;
+		NBTRADES = 0;
+		NBCAGES = nb_cage_deploy3;
+		HRACTIVITY = 0;
+		BUILDINGTYPE = "Commercial";
+	}
+
+	if (building_1 === "Corporate") {
+		NBAPP = 0;
+		NBFLOOR = nb_floor2;
+		NBBASEMENT = nb_basement2;
+		NBDISTINCTB = dist_loca_2;
+		NBPARKING = nb_parking2;
+		MAXPERFLOOR = nb_maxPeople_2;
+		NBTRADES = 0;
+		NBCAGES = 0;
+		HRACTIVITY = 0;
+		BUILDINGTYPE = "Corporate";
+	}
+
+	if (building_1 === "Hybrid") {
+		NBAPP = 0;
+		NBFLOOR = nb_floor4;
+		NBBASEMENT = nb_basement4;
+		NBDISTINCTB = dist_busi_4;
+		NBPARKING = nb_parking4;
+		MAXPERFLOOR = nb_maxPeople4;
+		NBTRADES = 0;
+		NBCAGES = 0;
+		HRACTIVITY = hr_activity4;
+		BUILDINGTYPE = "Hybrid";
+	}
+});
+
+AllInfo = {
+	"Fullname": Name,
+	"Business name": PhoneNumber,
+	"NbApp": NBAPP,
+	"NbFloor": NBFLOOR,
+	"NbBasement": NBBASEMENT,
+	"NbDistinctB": NBBASEMENT,
+	"NbParking": NBPARKING,
+	"MaxPerFloor": MAXPERFLOOR,
+	"NbTrades": NBTRADES,
+	"NbCages": NBCAGES,
+	"HrActivity": HRACTIVITY,
+	"BuildingType": BUILDINGTYPE,
+	"Quality": Qual,
+	"TotEstimate": TOTESTIMATE,
+	"NbDistinctT": NBDISTINCTT
 
 }
 
-// Attach event listener to element
-SEND.addEventListener("click", PostFunc);
+
+$("#send").click(function () {
+	console.log("WORKING ?!??!?")
+	$.post("../../controllers/application_controller", {
+		"Fullname": Name,
+		"Business name": PhoneNumber,
+		"NbApp": NBAPP,
+		"NbFloor": NBFLOOR,
+		"NbBasement": NBBASEMENT,
+		"BuildingType": BUILDINGTYPE,
+		"Quality": Qual,
+		"TotEstimate": TOTESTIMATE,
+		"NbDistinctT": NBDISTINCTT
+	});
+});

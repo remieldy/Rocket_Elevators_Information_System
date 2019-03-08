@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_03_07_005454) do
-=======
-ActiveRecord::Schema.define(version: 2019_03_06_213431) do
->>>>>>> 1b29a5219cbadbf69dc6e44a5bc6c89a99b33ea8
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -34,7 +30,6 @@ ActiveRecord::Schema.define(version: 2019_03_06_213431) do
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
     t.string "full_name"
     t.string "business_name"
     t.string "project_description"
@@ -51,8 +46,6 @@ ActiveRecord::Schema.define(version: 2019_03_06_213431) do
     t.integer "maximum_occupant_per_floor"
     t.integer "hour_of_activity"
     t.integer "estimated_number_of_elevatirs_cage"
-=======
->>>>>>> 1b29a5219cbadbf69dc6e44a5bc6c89a99b33ea8
   end
 
 end
