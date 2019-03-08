@@ -1,0 +1,27 @@
+<%= form_with(model: test_airton, local: true) do |form| %>
+  <% if test_airton.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(test_airton.errors.count, "error") %> prohibited this test_airton from being saved:</h2>
+
+      <ul>
+      <% test_airton.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.text_field :id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

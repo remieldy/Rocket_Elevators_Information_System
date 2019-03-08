@@ -1,0 +1,2 @@
+class DomQuote < ApplicationRecord
+end

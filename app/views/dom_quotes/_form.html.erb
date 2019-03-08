@@ -1,0 +1,77 @@
+<%= form_with(model: dom_quote, local: true) do |form| %>
+  <% if dom_quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dom_quote.errors.count, "error") %> prohibited this dom_quote from being saved:</h2>
+
+      <ul>
+      <% dom_quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :FullName %>
+    <%= form.text_field :FullName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PhoneNumber %>
+    <%= form.number_field :PhoneNumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NumberApp %>
+    <%= form.number_field :NumberApp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NumberFloor %>
+    <%= form.number_field :NumberFloor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NumberBasement %>
+    <%= form.number_field :NumberBasement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NumberDistinct %>
+    <%= form.number_field :NumberDistinct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NumberParking %>
+    <%= form.number_field :NumberParking %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MaxPersonFloor %>
+    <%= form.text_field :MaxPersonFloor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NumberTrades %>
+    <%= form.number_field :NumberTrades %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NumberCages %>
+    <%= form.number_field :NumberCages %>
+  </div>
+
+  <div class="field">
+    <%= form.label :HrActivity %>
+    <%= form.number_field :HrActivity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ID %>
+    <%= form.text_field :ID %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

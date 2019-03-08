@@ -1,0 +1,2 @@
+class TestAirton < ApplicationRecord
+end

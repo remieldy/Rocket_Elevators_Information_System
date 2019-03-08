@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dom Quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Phonenumber</th>
+      <th>Numberapp</th>
+      <th>Numberfloor</th>
+      <th>Numberbasement</th>
+      <th>Numberdistinct</th>
+      <th>Numberparking</th>
+      <th>Maxpersonfloor</th>
+      <th>Numbertrades</th>
+      <th>Numbercages</th>
+      <th>Hractivity</th>
+      <th>Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dom_quotes.each do |dom_quote| %>
+      <tr>
+        <td><%= dom_quote.FullName %></td>
+        <td><%= dom_quote.PhoneNumber %></td>
+        <td><%= dom_quote.NumberApp %></td>
+        <td><%= dom_quote.NumberFloor %></td>
+        <td><%= dom_quote.NumberBasement %></td>
+        <td><%= dom_quote.NumberDistinct %></td>
+        <td><%= dom_quote.NumberParking %></td>
+        <td><%= dom_quote.MaxPersonFloor %></td>
+        <td><%= dom_quote.NumberTrades %></td>
+        <td><%= dom_quote.NumberCages %></td>
+        <td><%= dom_quote.HrActivity %></td>
+        <td><%= dom_quote.ID %></td>
+        <td><%= link_to 'Show', dom_quote %></td>
+        <td><%= link_to 'Edit', edit_dom_quote_path(dom_quote) %></td>
+        <td><%= link_to 'Destroy', dom_quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dom Quote', new_dom_quote_path %>

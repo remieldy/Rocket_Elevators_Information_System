@@ -48,4 +48,5 @@ class AddDeviseToAdmins < ActiveRecord::Migration[5.2]
     # model already existed. Please edit below which fields you would like to remove in this migration.
     raise ActiveRecord::IrreversibleMigration
   end
+
 end

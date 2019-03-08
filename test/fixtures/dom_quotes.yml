@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FullName: MyString
+  PhoneNumber: 1
+  NumberApp: 1
+  NumberFloor: 1
+  NumberBasement: 1
+  NumberDistinct: 1
+  NumberParking: 1
+  MaxPersonFloor: 
+  NumberTrades: 1
+  NumberCages: 1
+  HrActivity: 1
+  ID: MyString
+
+two:
+  FullName: MyString
+  PhoneNumber: 1
+  NumberApp: 1
+  NumberFloor: 1
+  NumberBasement: 1
+  NumberDistinct: 1
+  NumberParking: 1
+  MaxPersonFloor: 
+  NumberTrades: 1
+  NumberCages: 1
+  HrActivity: 1
+  ID: MyString
