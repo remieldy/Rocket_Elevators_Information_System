@@ -1,6 +1,8 @@
 # README
 
 #Link to video
+https://www.youtube.com/watch?v=EV7n7lx0N9Y&feature=youtu.be
+#PS: Problem with the logout is resolved by removing the https
 
 #
 
