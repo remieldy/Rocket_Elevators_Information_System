@@ -31,21 +31,22 @@ ActiveRecord::Schema.define(version: 2019_03_07_005454) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "full_name"
-    t.string "business_name"
-    t.string "project_description"
-    t.string "Message"
+    t.string "phone_number"
     t.string "building_type"
+    t.string "quality"
     t.float "elevator_price"
     t.float "installation_price"
+    t.float "number_elevator"
     t.float "total_price"
-    t.float "number_of_trade_market"
     t.integer "number_floor"
+    t.integer "number_appartment"
     t.integer "number_basement"
     t.integer "number_parking_space"
-    t.integer "number_occupant_per_floor"
     t.integer "maximum_occupant_per_floor"
     t.integer "hour_of_activity"
-    t.integer "estimated_number_of_elevatirs_cage"
+    t.integer "number_of_elevators_cage"
+    t.integer "number_of_trade_market"
+    t.integer "number_of_distinct_business"
   end
 
 end

@@ -62,6 +62,11 @@ phone_number.addEventListener("keyup", NameAndPhone);
 // CELLS PART ------------------------------------------------------------------
 // Hiding all department
 
+$("#solo_estimate_fake").hide()
+$("#inst_fee_fake").hide()
+$("#num_elev_fake").hide()
+$("#tot_estimate_fake").hide()
+
 
 
 function hiding() {
@@ -269,9 +274,13 @@ var residential_funct = function () {
 			nb_elevator_modified = "0";
 		}
 		document.getElementById("num_elev").innerHTML = nb_elevator_modified;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = stand.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = standInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 
 	} else if ((document.getElementById("Premium").checked) === true) {
 		tot_price = Math.round((premIns * nb_elevator_modified) * 100 / 100).toFixed(2);
@@ -280,9 +289,14 @@ var residential_funct = function () {
 			nb_elevator_modified = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = prem.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = premInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_elevator_modified;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
+
 	} else if ((document.getElementById("Excelium").checked) === true) {
 		tot_price = (exelIns * nb_elevator_modified).toFixed(2);
 		if (isNaN(tot_price, nb_elevator_modified)) {
@@ -290,9 +304,13 @@ var residential_funct = function () {
 			nb_elevator_modified = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = exel.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = exelInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_elevator_modified;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
 	}
 
 	document.getElementById("error_txt").style.display = 'none';
@@ -382,9 +400,14 @@ var corporate_funct = function () {
 			nb_elevator_tot = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = stand.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = standInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_elevator_tot;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
+
 	} else if ((document.getElementById("Premium").checked) === true) {
 		tot_price = Math.round((premIns * nb_elevator_tot * 100) / 100).toFixed(2);
 		if (isNaN(tot_price, nb_elevator_tot)) {
@@ -392,9 +415,14 @@ var corporate_funct = function () {
 			nb_elevator_tot = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = prem.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = premInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_elevator_tot;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
+
 	} else if ((document.getElementById("Excelium").checked) === true) {
 		tot_price = (exelIns * nb_elevator_tot).toFixed(2);
 		if (isNaN(tot_price, nb_elevator_tot)) {
@@ -402,9 +430,13 @@ var corporate_funct = function () {
 			nb_elevator_tot = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = exel.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = exelInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_elevator_tot;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
 	}
 
 
@@ -486,9 +518,13 @@ var commercial_funct = function () {
 			nb_cage_deploy3 = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = stand.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = standInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_cage_deploy3;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
 	}
 	if ((document.getElementById("Premium").checked) === true) {
 		tot_price = Math.round((premIns * nb_cage_deploy3 * 100) / 100).toFixed(2);
@@ -497,9 +533,13 @@ var commercial_funct = function () {
 			nb_cage_deploy3 = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = prem.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = premInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_cage_deploy3;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
 	}
 	if ((document.getElementById("Excelium").checked) === true) {
 		tot_price = (exelIns * nb_cage_deploy3).toFixed(2);
@@ -508,9 +548,13 @@ var commercial_funct = function () {
 			nb_cage_deploy3 = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = exel.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = exelInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_cage_deploy3;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
 	}
 
 	document.getElementById("error9_txt").style.display = 'none';
@@ -608,9 +652,13 @@ var hybrid_funct = function () {
 			nb_elevator_tot = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = stand.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = standInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_elevator_tot;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
 	}
 	if ((document.getElementById("Premium").checked) === true) {
 		tot_price = Math.round((premIns * nb_elevator_tot * 100) / 100).toFixed(2);
@@ -619,9 +667,13 @@ var hybrid_funct = function () {
 			nb_elevator_tot = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = prem.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = premInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_elevator_tot;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
 	}
 	if ((document.getElementById("Excelium").checked) === true) {
 		tot_price = (exelIns * nb_elevator_tot).toFixed(2);
@@ -630,9 +682,13 @@ var hybrid_funct = function () {
 			nb_elevator_tot = "0";
 		}
 		document.getElementById("tot_estimate").innerHTML = tot_price + "$";
+		document.getElementById("tot_estimate_fake").value = tot_price;
 		document.getElementById("solo_estimate").innerHTML = exel.toFixed(2) + "$";
+		document.getElementById("solo_estimate_fake").value = stand.toFixed(2);
 		document.getElementById("inst_fee").innerHTML = exelInsCost.toFixed(2) + "$";
+		document.getElementById("inst_fee_fake").value = standInsCost.toFixed(2);
 		document.getElementById("num_elev").innerHTML = nb_elevator_tot;
+		document.getElementById("num_elev_fake").value = nb_elevator_modified;
 	}
 
 	document.getElementById("error10_txt").style.display = 'none';
@@ -695,111 +751,111 @@ hr_activity4.addEventListener("keyup", hybrid_funct);
 
 
 
-var sendingQuote = {
-	"FullName": Name,
-	"PhoneNumber": PhoneNumber,
-	"NbApp": NBAPP,
-	"NbFloor": NBFLOOR,
-	"NbBasement": NBBASEMENT,
-	"NbDistinctB": NBBASEMENT,
-	"NbParking": NBPARKING,
-	"MaxPerFloor": MAXPERFLOOR,
-	"NbTrades": NBTRADES,
-	"NbCages": NBCAGES,
-	"HrActivity": HRACTIVITY,
-	"BuildingType": BUILDINGTYPE,
-	"Quality": Qual,
-	"TotEstimate": TOTESTIMATE,
-	"NbDistinctT": NBDISTINCTT
-}
+// var sendingQuote = {
+// 	"FullName": Name,
+// 	"PhoneNumber": PhoneNumber,
+// 	"NbApp": NBAPP,
+// 	"NbFloor": NBFLOOR,
+// 	"NbBasement": NBBASEMENT,
+// 	"NbDistinctB": NBBASEMENT,
+// 	"NbParking": NBPARKING,
+// 	"MaxPerFloor": MAXPERFLOOR,
+// 	"NbTrades": NBTRADES,
+// 	"NbCages": NBCAGES,
+// 	"HrActivity": HRACTIVITY,
+// 	"BuildingType": BUILDINGTYPE,
+// 	"Quality": Qual,
+// 	"TotEstimate": TOTESTIMATE,
+// 	"NbDistinctT": NBDISTINCTT
+// }
 
-// app\controllers\application_controller.rb
+// // app\controllers\application_controller.rb
 
-$("#send").click(function () {
-	if (building_1 === "Residential") {
-		NBAPP = nb_app1;
-		NBFLOOR = nb_floor1;
-		NBBASEMENT = nb_basement1;
-		NBDISTINCT = 0;
-		NBPARKING = 0;
-		MAXPERFLOOR = 0;
-		NBTRADES = 0;
-		NBCAGES = 0;
-		HRACTIVITY = 0;
-		BUILDINGTYPE = "Residential";
-	}
+// $("#send").click(function () {
+// 	if (building_1 === "Residential") {
+// 		NBAPP = nb_app1;
+// 		NBFLOOR = nb_floor1;
+// 		NBBASEMENT = nb_basement1;
+// 		NBDISTINCT = 0;
+// 		NBPARKING = 0;
+// 		MAXPERFLOOR = 0;
+// 		NBTRADES = 0;
+// 		NBCAGES = 0;
+// 		HRACTIVITY = 0;
+// 		BUILDINGTYPE = "Residential";
+// 	}
 
-	if (building_1 === "Commercial") {
-		NBAPP = 0;
-		NBFLOOR = nb_floor3;
-		NBBASEMENT = nb_basement3;
-		NBDISTINCTB = nb_trade3;
-		NBPARKING = nb_parking3;
-		MAXPERFLOOR = 0;
-		NBTRADES = 0;
-		NBCAGES = nb_cage_deploy3;
-		HRACTIVITY = 0;
-		BUILDINGTYPE = "Commercial";
-	}
+// 	if (building_1 === "Commercial") {
+// 		NBAPP = 0;
+// 		NBFLOOR = nb_floor3;
+// 		NBBASEMENT = nb_basement3;
+// 		NBDISTINCTB = nb_trade3;
+// 		NBPARKING = nb_parking3;
+// 		MAXPERFLOOR = 0;
+// 		NBTRADES = 0;
+// 		NBCAGES = nb_cage_deploy3;
+// 		HRACTIVITY = 0;
+// 		BUILDINGTYPE = "Commercial";
+// 	}
 
-	if (building_1 === "Corporate") {
-		NBAPP = 0;
-		NBFLOOR = nb_floor2;
-		NBBASEMENT = nb_basement2;
-		NBDISTINCTB = dist_loca_2;
-		NBPARKING = nb_parking2;
-		MAXPERFLOOR = nb_maxPeople_2;
-		NBTRADES = 0;
-		NBCAGES = 0;
-		HRACTIVITY = 0;
-		BUILDINGTYPE = "Corporate";
-	}
+// 	if (building_1 === "Corporate") {
+// 		NBAPP = 0;
+// 		NBFLOOR = nb_floor2;
+// 		NBBASEMENT = nb_basement2;
+// 		NBDISTINCTB = dist_loca_2;
+// 		NBPARKING = nb_parking2;
+// 		MAXPERFLOOR = nb_maxPeople_2;
+// 		NBTRADES = 0;
+// 		NBCAGES = 0;
+// 		HRACTIVITY = 0;
+// 		BUILDINGTYPE = "Corporate";
+// 	}
 
-	if (building_1 === "Hybrid") {
-		NBAPP = 0;
-		NBFLOOR = nb_floor4;
-		NBBASEMENT = nb_basement4;
-		NBDISTINCTB = dist_busi_4;
-		NBPARKING = nb_parking4;
-		MAXPERFLOOR = nb_maxPeople4;
-		NBTRADES = 0;
-		NBCAGES = 0;
-		HRACTIVITY = hr_activity4;
-		BUILDINGTYPE = "Hybrid";
-	}
-});
+// 	if (building_1 === "Hybrid") {
+// 		NBAPP = 0;
+// 		NBFLOOR = nb_floor4;
+// 		NBBASEMENT = nb_basement4;
+// 		NBDISTINCTB = dist_busi_4;
+// 		NBPARKING = nb_parking4;
+// 		MAXPERFLOOR = nb_maxPeople4;
+// 		NBTRADES = 0;
+// 		NBCAGES = 0;
+// 		HRACTIVITY = hr_activity4;
+// 		BUILDINGTYPE = "Hybrid";
+// 	}
+// });
 
-AllInfo = {
-	"Fullname": Name,
-	"Business name": PhoneNumber,
-	"NbApp": NBAPP,
-	"NbFloor": NBFLOOR,
-	"NbBasement": NBBASEMENT,
-	"NbDistinctB": NBBASEMENT,
-	"NbParking": NBPARKING,
-	"MaxPerFloor": MAXPERFLOOR,
-	"NbTrades": NBTRADES,
-	"NbCages": NBCAGES,
-	"HrActivity": HRACTIVITY,
-	"BuildingType": BUILDINGTYPE,
-	"Quality": Qual,
-	"TotEstimate": TOTESTIMATE,
-	"NbDistinctT": NBDISTINCTT
+// AllInfo = {
+// 	"Fullname": Name,
+// 	"Business name": PhoneNumber,
+// 	"NbApp": NBAPP,
+// 	"NbFloor": NBFLOOR,
+// 	"NbBasement": NBBASEMENT,
+// 	"NbDistinctB": NBBASEMENT,
+// 	"NbParking": NBPARKING,
+// 	"MaxPerFloor": MAXPERFLOOR,
+// 	"NbTrades": NBTRADES,
+// 	"NbCages": NBCAGES,
+// 	"HrActivity": HRACTIVITY,
+// 	"BuildingType": BUILDINGTYPE,
+// 	"Quality": Qual,
+// 	"TotEstimate": TOTESTIMATE,
+// 	"NbDistinctT": NBDISTINCTT
 
-}
+// }
 
 
-$("#send").click(function () {
-	console.log("WORKING ?!??!?")
-	$.post("../../controllers/application_controller", {
-		"Fullname": Name,
-		"Business name": PhoneNumber,
-		"NbApp": NBAPP,
-		"NbFloor": NBFLOOR,
-		"NbBasement": NBBASEMENT,
-		"BuildingType": BUILDINGTYPE,
-		"Quality": Qual,
-		"TotEstimate": TOTESTIMATE,
-		"NbDistinctT": NBDISTINCTT
-	});
-});
+// $("#send").click(function () {
+// 	console.log("WORKING ?!??!?")
+// 	$.post("../../controllers/application_controller", {
+// 		"Fullname": Name,
+// 		"Business name": PhoneNumber,
+// 		"NbApp": NBAPP,
+// 		"NbFloor": NBFLOOR,
+// 		"NbBasement": NBBASEMENT,
+// 		"BuildingType": BUILDINGTYPE,
+// 		"Quality": Qual,
+// 		"TotEstimate": TOTESTIMATE,
+// 		"NbDistinctT": NBDISTINCTT
+// 	});
+// });
