@@ -24,12 +24,24 @@
 </p>
 
 <p>
-  <strong>Total Estimation:</strong>
-  <%= @quote.total_price %>
+  <strong>Price per elevators:</strong>
+  <%= @quote.elevator_price %> $
 </p>
 
-<%= link_to 'Edit', edit_quote_path(@quote) %> |
-<%= link_to 'Back', quotes_path %>
+<p>
+  <strong>Installation fees:</strong> 
+  <%= @quote.installation_price %> $
+</p>
+
+
+
+<p>
+  <strong>Total Estimation:</strong>
+  <%= @quote.total_price %> $
+</p>
+
+<%# <%= link_to 'Edit', edit_quote_path(@quote) %>
+<%# <%= link_to 'Back', quotes_path %>
 
 
    <%# add_column :quotes, :full_name ,:string
