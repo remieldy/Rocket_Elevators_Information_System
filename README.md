@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Link to video
 
-Things you may want to cover:
+#
 
-* Ruby version
+This is a ruby on rails project for RocketElevators. The goal was to make an interactive website with
+my original static website and link it to a database to store Employee login data and the quote data in
+separate tables. The website have a backoffice that employee can login to acces the data from quote.
 
-* System dependencies
+#
 
-* Configuration
+Framework : rails
+Database used : MYSQL
+Deployed with : Capistrano
+gems used for login and admin pages : devise and rails_admin
 
-* Database creation
+#
 
-* Database initialization
+# Programming Language used
 
-* How to run the test suite
+-Javascript
+-HTML
+-CSS
+-Ruby
 
-* Services (job queues, cache servers, search engines, etc.)
+#
 
-* Deployment instructions
+# Collaborators :
 
-* ...
+-Remi Lemay-Dupont
+-Joanie Coffey
+-Airton
+-Charles Hébert
