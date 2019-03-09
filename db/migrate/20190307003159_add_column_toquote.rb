@@ -9,7 +9,7 @@ class AddColumnToquote < ActiveRecord::Migration[5.2]
     add_column :quotes, :installation_price ,:float
     add_column :quotes, :total_price ,:float
     add_column :quotes, :number_of_trade_market, :float
-    #####  Peut-être simplement faire une seule column pour certaines données afin d'éviter la surchage 
+    
     add_column :quotes, :number_floor, :integer
     add_column :quotes, :number_basement, :float
     add_column :quotes, :number_parking_space, :integer
